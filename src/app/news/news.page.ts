@@ -6,13 +6,14 @@ import { NewsService} from '../news.service'
   styleUrls: ['./news.page.scss'],
 })
 export class NewsPage implements OnInit {
- 
+  users:any;
   constructor(private newsService  :NewsService) { }
 
   ngOnInit() {
-    this.newsService.getData('everything?q=bitcoin&from=2019-05-27&sortBy=publishedAt').subscribe(
+    this.newsService.getData().subscribe(
       data=>{
-        console.log(data)
+        this.users = data
+        console.log(this.users);
       }
     )
   }

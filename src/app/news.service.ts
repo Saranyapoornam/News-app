@@ -9,9 +9,8 @@ const API_KEY = environment.apiKey;
 export class NewsService {
 
   constructor(private http:HttpClient) { }
-  getData(url){
-    debugger
-   // return this.http.get(`${API_URL}/${url}?apiKey=${API_KEY}`)
-   return this.http.get('https://newsapi.org/v2/everything?q=bitcoin&from=2019-05-27&sortBy=publishedAt&apiKey=117bbb2552d4499b9a9432494c60946b')
+  getData(){ 
+   // return this.http.get(`${API_URL}/${url}&apiKey=${API_KEY}`)
+   return this.http.get('https://reqres.in/api/users')
   }
 }

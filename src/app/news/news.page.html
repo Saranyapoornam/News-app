@@ -1,9 +1,9 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>news</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
-</ion-content>
+<ion-card *ngFor="let user of users.data">
+  <ion-card-header>
+    <ion-card-title>{{user.first_name}}</ion-card-title>
+  </ion-card-header>
+<ion-img [src]="user.avatar"></ion-img>
+  <ion-card-content>
+  Mail id: {{user.email}}
+  </ion-card-content>
+</ion-card>
